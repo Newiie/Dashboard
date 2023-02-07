@@ -64,23 +64,45 @@ select {
 .container {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: auto 4fr;
     grid-template-rows: auto 3fr;
 }
 
 .navigation {
-    grid-row: 1 / -1;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    /* padding-left: 10%;
-    padding-top: 2rem; */
-    color: #EEEEEE;
-    background-color: #0E86D4;
-
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: 15% auto;
+  column-gap: 2rem;
+  grid-template-rows: repeat(5, 70px);
+  grid-auto-rows: 70px;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0E86D4;
+  overflow: hidden;
+  width: 70px;
+  transition: width 0.65s ;
 }
 
+
+i {
+  width: 15px;
+  color: white;
+}
+
+.navigation div {
+  font-size: 2rem;
+  color: white;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.8s;
+}
+
+.navigation div:hover {
+  color: #084f7e;
+  cursor: pointer;
+  width: 85%;
+}
 ul li:hover {
   color: #084f7e;
   background-color: white;
@@ -131,6 +153,7 @@ ul li:hover {
 ul > *:not(:first-child) {
   margin-top: 1.5rem;
 }
+
 .content {
   display: grid;
   grid-template-columns: 3fr 1fr;
