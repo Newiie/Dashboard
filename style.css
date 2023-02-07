@@ -81,28 +81,36 @@ select {
   background-color: #0E86D4;
   overflow: hidden;
   width: 70px;
-  transition: width 0.65s ;
+  transition: grid-template-columns 0.65s ease-in-out, width 0.65s ease-in-out;
 }
 
+.navigation:hover {
+  grid-template-columns: 15% 85%;
+  width: 300px;
+}
 
 i {
   width: 15px;
   color: white;
 }
 
+.hover {
+  color: #092a41 !important;
+}
+
 .navigation div {
   font-size: 2rem;
-  color: white;
+  color: rgb(14, 134, 212);
   width: 0;
-  overflow: hidden;
-  transition: width 0.8s;
+  transition: width 0.65s;
 }
 
 .navigation div:hover {
-  color: #084f7e;
+  color: #0c2b41;
   cursor: pointer;
-  width: 85%;
+  width: 250px;
 }
+
 ul li:hover {
   color: #084f7e;
   background-color: white;
@@ -245,6 +253,8 @@ ul > *:not(:first-child) {
   gap: 2rem;
   padding-right: 2rem;
 }
+
+
 .search {
   display: flex;
   justify-content: start;
